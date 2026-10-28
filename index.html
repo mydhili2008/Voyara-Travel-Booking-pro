@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Voyara — Explore Beyond Borders. Discover journeys by flight, train, bus and ship.">
+  <title>Voyara — Explore Beyond Borders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="announcement">A wider world is waiting. <a href="#destinations">Find your next escape ↗</a></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Voyara home"><span class="brand-mark">V</span><span>voyara<span class="brand-dot">.</span><small>EXPLORE BEYOND BORDERS</small></span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#destinations">Destinations</a><a href="#journeys">Journeys</a><a href="#offers">Offers</a><a href="#about">Our story</a>
+    </nav>
+    <div class="header-actions"><button class="text-button" id="currencyBtn">INR ₹⌄</button><a class="sign-in" href="#booking">Plan a trip <span>↗</span></a></div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-image"></div><div class="hero-shade"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow light"><span></span> THE WORLD, OPENED UP</p>
+        <h1>Go where<br>you <em>feel alive.</em></h1>
+        <p class="hero-copy">Extraordinary places. Thoughtful journeys.<br>Your next story starts here.</p>
+        <a class="round-link" href="#booking" aria-label="Explore journeys">Explore journeys <span>↘</span></a>
+      </div>
+      <div class="hero-note"><span>01 / 04</span><span class="note-line"></span><span>Discover the extraordinary</span></div>
+      <div class="hero-location"><span class="location-pin">⌖</span> AMALFI COAST, ITALY <span class="location-sep">—</span> 40°37' N, 14°36' E</div>
+      <div class="hero-side-label">TRAVEL AT YOUR OWN PACE</div>
+    </section>
+
+    <section class="booking-wrap" id="booking">
+      <div class="booking-heading"><div><p class="eyebrow">YOUR JOURNEY BEGINS</p><h2>Where to next?</h2></div><p class="muted small">One place to plan it all.</p></div>
+      <div class="transport-tabs" role="tablist" aria-label="Transport type">
+        <button class="transport-tab active" data-mode="flight" role="tab" aria-selected="true"><span>✈</span> Flights</button>
+        <button class="transport-tab" data-mode="train" role="tab" aria-selected="false"><span>▤</span> Trains</button>
+        <button class="transport-tab" data-mode="bus" role="tab" aria-selected="false"><span>▰</span> Buses</button>
+        <button class="transport-tab" data-mode="ship" role="tab" aria-selected="false"><span>≋</span> Ships</button>
+      </div>
+      <form id="searchForm" class="search-form">
+        <label class="field"><span>FROM</span><input id="origin" required placeholder="Your starting point" value="Vijayawada"></label>
+        <button class="swap-button" type="button" id="swapBtn" aria-label="Swap origin and destination">⇄</button>
+        <label class="field"><span>TO</span><input id="destination" required placeholder="Where do you want to go?" value="Goa"></label>
+        <label class="field date-field"><span>DEPARTURE</span><input id="departDate" type="date" required></label>
+        <label class="field"><span>TRAVELLERS</span><select id="travellers"><option>1 traveller</option><option>2 travellers</option><option>3 travellers</option><option>4 travellers</option><option>5+ travellers</option></select></label>
+        <button class="search-button" type="submit">Search journeys <span>↗</span></button>
+      </form>
+      <p class="demo-note">Demo experience · Search results use illustrative sample data, not live availability.</p>
+      <div id="searchResults" class="search-results" aria-live="polite"></div>
+    </section>
+
+    <section class="destinations section-pad" id="destinations">
+      <div class="section-heading reveal"><div><p class="eyebrow">A WORLD OF POSSIBILITIES</p><h2>Places that stay<br>with you.</h2></div><a class="underlined-link" href="#journeys">Explore all destinations <span>↗</span></a></div>
+      <div class="destination-grid">
+        <article class="destination-card destination-large reveal" tabindex="0"><img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=85" alt="Colourful coastal villages on the Italian Riviera"><div class="card-gradient"></div><div class="destination-meta"><span>ITALY · EUROPE</span><span>01</span></div><div class="destination-title"><h3>Amalfi Coast</h3><p>Salt in the air. Time to spare.</p></div><a href="#booking" class="card-arrow" aria-label="Plan a trip to Amalfi Coast">↗</a></article>
+        <article class="destination-card reveal" tabindex="0"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=85" alt="Tropical Bali temple and lush landscape"><div class="card-gradient"></div><div class="destination-meta"><span>BALI · INDONESIA</span><span>02</span></div><div class="destination-title"><h3>Bali, slowly</h3><p>Find your island rhythm.</p></div><a href="#booking" class="card-arrow" aria-label="Plan a trip to Bali">↗</a></article>
+        <article class="destination-card reveal" tabindex="0"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Mountain valley beneath a dramatic sky"><div class="card-gradient"></div><div class="destination-meta"><span>THE ALPS · SWITZERLAND</span><span>03</span></div><div class="destination-title"><h3>Into the wild</h3><p>Take the scenic route.</p></div><a href="#booking" class="card-arrow" aria-label="Plan an Alpine trip">↗</a></article>
+      </div>
+    </section>
+
+    <section class="journeys section-pad" id="journeys">
+      <div class="section-heading reveal"><div><p class="eyebrow">THE WAY YOU GET THERE</p><h2>Every route has<br>a different feeling.</h2></div><p class="section-intro">A window seat, a winding road, an open horizon. Choose the journey that feels like you.</p></div>
+      <div class="journey-grid">
+        <article class="journey-card reveal"><div class="journey-icon">✈</div><div class="journey-top"><span>01 / AIR</span><span>Across the distance</span></div><h3>Take flight.</h3><p>Find routes for faraway cities and spontaneous weekends.</p><button data-pick="flight" class="journey-cta">Explore flights ↗</button></article>
+        <article class="journey-card reveal"><div class="journey-icon">▤</div><div class="journey-top"><span>02 / RAIL</span><span>Watch the world pass</span></div><h3>Ride the rails.</h3><p>Make the in-between part of the adventure.</p><button data-pick="train" class="journey-cta">Explore trains ↗</button></article>
+        <article class="journey-card reveal"><div class="journey-icon">▰</div><div class="journey-top"><span>03 / ROAD</span><span>Room for detours</span></div><h3>Take the road.</h3><p>Discover comfortable connections and new places on the way.</p><button data-pick="bus" class="journey-cta">Explore buses ↗</button></article>
+        <article class="journey-card reveal"><div class="journey-icon">≋</div><div class="journey-top"><span>04 / SEA</span><span>Let the tide decide</span></div><h3>Follow the sea.</h3><p>Explore coastal routes and cruise-inspired escapes.</p><button data-pick="ship" class="journey-cta">Explore ships ↗</button></article>
+      </div>
+    </section>
+
+    <section class="quote-section" id="about"><div class="quote-bg"></div><div class="quote-content reveal"><p class="eyebrow light">A DIFFERENT KIND OF TRAVEL</p><blockquote>“The best journeys<br>aren’t just about<br><em>where you go.</em>”</blockquote><p>They’re about who you become along the way.</p><a class="round-link" href="#booking">Make it yours <span>↗</span></a></div><div class="quote-caption">LESS CHECKLIST. MORE WONDER.</div></section>
+
+    <section class="offers section-pad" id="offers"><div class="offer-copy reveal"><p class="eyebrow">A LITTLE INSPIRATION</p><h2>Good trips.<br>Better stories.</h2><p>Sign up for thoughtful travel ideas, destination guides and occasional offers. No noise, just inspiration.</p><form id="newsletterForm" class="newsletter-form"><label class="sr-only" for="email">Email address</label><input id="email" type="email" placeholder="Your email address" required><button type="submit" aria-label="Subscribe">↗</button></form><p class="form-message" id="newsletterMessage" aria-live="polite"></p><small>By subscribing, you agree to receive travel inspiration emails.</small></div><div class="offer-image reveal"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85" alt="Sunlit mountain peaks in a dramatic landscape"><div class="image-stamp">GO<br>BEYOND<br><span>THE USUAL</span></div></div></section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#top"><span class="brand-mark">V</span><span>voyara<span class="brand-dot">.</span><small>EXPLORE BEYOND BORDERS</small></span></a><p>Go well. Come back changed.</p><div class="footer-bottom"><span>© 2026 Voyara concept project</span><span>Designed for the curious.</span><a href="#top">Back to top ↑</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

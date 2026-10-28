@@ -1,0 +1,6 @@
+/* Animation helpers for future sections. Main reveal and parallax behavior is in js/main.js. */
+@keyframes drift{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-8px,0)}}
+@keyframes soft-pulse{0%,100%{opacity:.7}50%{opacity:1}}
+.float-soft{animation:drift 6s ease-in-out infinite}
+.pulse-soft{animation:soft-pulse 3s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.float-soft,.pulse-soft{animation:none}}
